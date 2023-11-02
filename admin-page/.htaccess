@@ -1,0 +1,47 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^index$ index.php 
+
+RewriteRule ^login$ login.php
+
+RewriteRule ^settings$ settings.php
+
+RewriteRule ^login-warning-1$ login.php?type=warning&statu=1
+
+RewriteRule ^login-warning-2$ login.php?type=warning&statu=2
+
+RewriteRule ^login-success-1$ login.php?type=success&statu=1
+
+RewriteRule ^settings-warning-1$ settings.php?type=warning&statu=1
+
+RewriteRule ^settings-warning-2$ settings.php?type=warning&statu=2
+
+RewriteRule ^settings-warning-3$ settings.php?type=warning&statu=3
+
+RewriteRule ^settings-warning-4$ settings.php?type=warning&statu=4
+
+RewriteRule ^settings-warning-5$ settings.php?type=warning&statu=5
+
+RewriteRule ^settings-warning-6$ settings.php?type=warning&statu=6
+
+RewriteRule ^settings-warning-7$ settings.php?type=warning&statu=7
+
+RewriteRule ^settings-warning-8$ settings.php?type=warning&statu=8
+
+RewriteRule ^settings-warning-9$ settings.php?type=warning&statu=9
+
+RewriteRule ^settings-success-2$ settings.php?type=success&statu=2
+
+RewriteRule ^contact-success-2$ contact.php?type=success&statu=2
+
+RewriteRule ^contact-warning-1$ contact.php?type=warning&statu=1
+
+RewriteRule ^groups-success-1$ groups.php?type=success&statu=1
+
+RewriteRule ^groups-warning-1$ groups.php?type=warning&statu=1
+
+RewriteRule ^group-success-1$ group.php?type=success&statu=1
+
+RewriteRule ^group-warning-1$ group.php?type=warning&statu=1

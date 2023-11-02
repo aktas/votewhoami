@@ -1,0 +1,46 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^index$ index.php 
+
+RewriteRule ^en$ en.php 
+
+RewriteRule ^en-1$ en.php?statu=ok 
+
+RewriteRule ^tr$ tr.php 
+
+RewriteRule ^tr-1$ tr.php?statu=ok
+
+RewriteRule ^termsofservice$ termsOfService.php
+
+RewriteRule ^privacypolicy$ privacyPolicy.php  
+
+RewriteRule ^termsofservice-1$ termsOfService.php?statu=ok
+
+RewriteRule ^privacypolicy-1$ privacyPolicy.php?statu=ok  
+
+RewriteRule ^termsofservice-0$ termsOfService.php?statu=no
+
+RewriteRule ^privacypolicy-0$ privacyPolicy.php?statu=no
+
+RewriteRule ^en-0$ en.php?statu=no 
+
+RewriteRule ^tr-0$ tr.php?statu=no 
+
+RewriteRule ^termsofservice-2$ termsOfService.php?statu=nope
+
+RewriteRule ^privacypolicy-2$ privacyPolicy.php?statu=nope
+
+RewriteRule ^en-2$ en.php?statu=nope
+
+RewriteRule ^tr-2$ tr.php?statu=nope 
+
+RewriteRule ^english-(.*)$ en.php?language=English&i=$1
+
+RewriteRule ^turkish-(.*)$ tr.php?language=Turkish&i=$1
+
+
+RewriteCond %{HTTPS} !=on
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/.+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
